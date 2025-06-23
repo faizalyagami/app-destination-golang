@@ -5,6 +5,7 @@ import (
 	"app-destination/service"
 	"app-destination/utils"
 	"encoding/json"
+	"log"
 	"net/http"
 )
 
@@ -42,6 +43,7 @@ func (h *DestinationHandler) CreateDestination (w http.ResponseWriter, r *http.R
 
 	err := h.Service.CreateDestination(d)
 	if err != nil {
+		log.Println("insert error: ", err)
 		// http.Error(w, "Failed to create destination", http.StatusInternalServerError)
 		utils.RespondError(w, http.StatusBadRequest,"failed to create destination")
 		return
