@@ -7,7 +7,7 @@ type Destination struct {
 	Description   string  `json:"description"`
 	Price         float64 `json:"price"`
 	TourDuration  string  `json:"tour_duration"`
-	Rating        int     `json:"rating"`
+	Rating        float64 `json:"rating"`
 	Images        string  `json:"images"`
 	People        string  `json:"people"`
 	FlagImage     string  `json:"flag_image"`
